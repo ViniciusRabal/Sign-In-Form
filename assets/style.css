@@ -9,10 +9,27 @@
 
 }
 .header {
-  display: flex;
-  justify-content: center;
+  display: block;
   margin-top: 1rem;
-  margin-bottom: 1.5rem;;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+.header h1 {
+  text-align: center;
+}
+.header h1::after {
+  content: '';
+  display: block;
+  width: 7rem;
+  height: 0.3rem;
+  background-image: linear-gradient(
+    90deg,
+    var(--colorA),
+    var(--colorC),
+    var(--colorE)
+  );
+  border-radius: 10px;
+  margin-left: 13rem;
 }
 .body {
   display: flex;
@@ -41,45 +58,90 @@
 .form-controller {
   display: flex;
   flex-direction: column;
+  position: relative;
+  margin-bottom: 1.6rem;
   align-items: center;
 }
 .form-controller i {
-  background-color: blue;
-  visibility: hidden;
   position: absolute;
-  top: 45px;
-  right: 10px;
+  right: 4rem;
+  top: 2.1rem;
+  visibility: hidden;
+}
+.form-controller i.fa-circle-check {
+  color: rgb(89, 212, 136);
+}
+.form-controller i.fa-circle-exclamation {
+  color: rgb(226, 58, 58);
 }
 .form-controller small {
   visibility: hidden;
+  position: absolute;
+  top: 3.35rem;
+  left: 1.7rem;
 }
 .form-controller label {
   display: inline-block;
-  margin-bottom: 5px;
+  margin-left: 1rem;
+  font-size: 1.08rem;
+  font-weight: 500;
+  text-align: center;
+}
+.form-controller label:hover {
+  color: #f5b1f8;
 }
 .form-controller input {
-  border: 0.2px solid black;
+  border: 0.2px solid rgb(99, 99, 99);
   display: block;
-  border-radius: 12px;
+  border-radius: 7px;
   width: 80%;
   padding: 4px;
-  padding-left: 10px;
-  padding-top: 5px;
+  padding-left: 0.7rem;
+  padding-top: 4px;
+  margin-left: 1rem;
+  margin-top: 0.08rem;
 }
 
 .button {
-  background-color: var(--colorA);
+  background-image: linear-gradient(
+    90deg,
+    var(--colorA),
+    var(--colorC),
+    var(--colorE)
+  );
   width: 50%;
   height: 100%;
   border-radius: 12px;
   border: none;
-  font-size: 1.5em;
+  font-size: 1.5rem;
+}
+.button:hover {
+  background-image: linear-gradient(
+    90deg,
+    var(--colorE),
+    var(--colorC),
+    var(--colorA)
+  );
+  cursor: pointer;
 }
 .subButton {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 3rem;
-  margin-top: 1rem;
 }
 
+/* Success and Error */
+
+.form-controller.success input {
+  border: 0.2px solid rgb(89, 212, 136);
+}
+.form-controller.sucess i.fa-circle-check {
+  visibility: visible;
+}
+
+
+
+.form-controller.error i.fa-circle-exclamation {
+  visibility: visible;
+}
