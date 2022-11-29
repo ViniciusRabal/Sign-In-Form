@@ -9,10 +9,12 @@
 
 }
 .header {
-  display: block;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
+  display: block; 
+  margin-bottom: 1.3rem;
   justify-content: center;
+  background-color: #aaa8a8;
+  padding-top: 13px;
+  border-radius: 12px 12px 0px 0px;
 }
 .header h1 {
   text-align: center;
@@ -20,8 +22,8 @@
 .header h1::after {
   content: '';
   display: block;
-  width: 7rem;
-  height: 0.3rem;
+  width: 8rem;
+  height: 0.4rem;
   background-image: linear-gradient(
     90deg,
     var(--colorA),
@@ -46,7 +48,7 @@
 }
 .container {
   display: block;
-  background-color: #fff;
+  background-color: #e6e6e6;
   border-radius: 12px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   height: 500px;
@@ -54,6 +56,7 @@
 }
 .form {
   display: block;
+
 }
 .form-controller {
   display: flex;
@@ -83,7 +86,7 @@
 .form-controller label {
   display: inline-block;
   margin-left: 1rem;
-  font-size: 1.08rem;
+  font-size: 1.2rem;
   font-weight: 500;
   text-align: center;
 }
@@ -91,44 +94,36 @@
   color: #f5b1f8;
 }
 .form-controller input {
-  border: 0.2px solid rgb(99, 99, 99);
+  border: 0.2px solid rgb(146, 146, 146);
   display: block;
-  border-radius: 7px;
+  border-radius: 20px;
   width: 80%;
   padding: 4px;
   padding-left: 0.7rem;
   padding-top: 4px;
-  margin-left: 1rem;
-  margin-top: 0.08rem;
+  margin-top: 0.1rem;
 }
 
 .button {
-  background-image: linear-gradient(
-    90deg,
-    var(--colorA),
-    var(--colorC),
-    var(--colorE)
-  );
-  width: 50%;
-  height: 100%;
-  border-radius: 12px;
+  width: 85%;
+  height: 3rem;
+  line-height: 3rem;
+  border-radius: 20px;
   border: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  color: white;
+  background-color: var(--colorA);
+  text-align: center;
 }
+
 .button:hover {
-  background-image: linear-gradient(
-    90deg,
-    var(--colorE),
-    var(--colorC),
-    var(--colorA)
-  );
   cursor: pointer;
+  opacity: 0.8;
 }
 .subButton {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3rem;
 }
 
 /* Success and Error */
@@ -139,9 +134,17 @@
 .form-controller.sucess i.fa-circle-check {
   visibility: visible;
 }
+.form-controller.sucess small {
+  visibility: visible;
+  color: rgb(89, 212, 136);;
+}
 
-
-
+.form-controller.error input {
+  border: 0.2px solid rgb(226, 58, 58);
+}
 .form-controller.error i.fa-circle-exclamation {
   visibility: visible;
+}
+.form-controller.error small {
+  color: rgb(226, 58, 58);;
 }
