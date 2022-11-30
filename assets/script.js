@@ -8,8 +8,8 @@ const confirmPassword = document.querySelector("#confirm-password")
 
 
 button.addEventListener("click", function(event) {
-    event.preventDefault();
     checkInputs();
+    event.preventDefault();
 } );
 
 function checkInputs () {
@@ -47,6 +47,17 @@ function checkInputs () {
         setErrorFor(confirmPassword, "As senhas não conferem!")
     }else {
         setSuccessFor(confirmPassword);
+    }
+
+    const formControls = form.querySelectorAll('.form-control')
+    //para conseguir fazer o loop usando o every, preciso transformar o 
+    // formControls em uma list
+    const formIsValid = [... formControls].every(formControls => {
+        return (formControls.className === "form-control success");
+    });
+
+    if (formIsValid) {
+        alert("Cadastro efetuado com sucesso!")
     }
 }
 
