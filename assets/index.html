@@ -15,7 +15,7 @@
       <div class="header">
         <h1>Criar uma conta</h1>
       </div>
-      <div class="form">
+      <div class="form" id="form">
         <div class="form-controller">
           <label for="username">Nome de Usuário</label>
           <input 
@@ -26,7 +26,7 @@
           />
           <i class="fa-solid fa-circle-check"></i>
           <i class="fa-solid fa-circle-exclamation"></i>
-          <small>Mensagem de aviso</small>
+          <small class="text">Mensagem de aviso</small>
         </div>
 
         <div class="form-controller">
@@ -39,7 +39,7 @@
             />
             <i class="fa-solid fa-circle-check"></i>
             <i class="fa-solid fa-circle-exclamation"></i>
-          <small>Mensagem de aviso</small>
+          <small class="text">Mensagem de aviso</small>
         </div>
 
         <div class="form-controller">
@@ -49,10 +49,11 @@
             type="password"
             placeholder="Sua senha aqui..."
             name="password"
+            required
           />
           <i class="fa-solid fa-circle-check"></i>
           <i class="fa-solid fa-circle-exclamation"></i>
-          <small>Mensagem de aviso</small>
+          <small class="text">Mensagem de aviso</small>
         </div>
 
         <div class="form-controller">
@@ -65,12 +66,13 @@
           />
           <i class="fa-solid fa-circle-check"></i>
           <i class="fa-solid fa-circle-exclamation"></i>
-          <small>Mensagem de aviso</small>
+          <small class="text">Mensagem de aviso</small>
+        </div>
+        <div class="subButton">
+          <button class="button" type="click" >Enviar</button>
+
         </div>
 
-        <div class="subButton">
-          <button class="button" type="submit">Enviar</button>
-        </div>
       </div>
     </div>
     <script
